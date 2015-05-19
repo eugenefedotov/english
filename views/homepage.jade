@@ -1,0 +1,80 @@
+extends ./layout
+
+
+block body
+  .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#/') English
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#') Мой профиль
+          li
+            a(href='#') Помощь
+        form.navbar-form.navbar-right
+          input.form-control(type='text', placeholder='Поиск...')
+  .container-fluid
+    .row
+      .col-sm-4.col-md-3.sidebar
+        ul.nav.nav-sidebar
+          li.active
+            a(href='#/article')
+              | Артикль
+          li
+            a(href='#/noun')
+              | Существительное
+          li
+            a(href='#/pronouns')
+              | Местоимения some, any, no, every
+              br
+              | и их производные
+          li
+            a(href='#/adjectives-degrees-of-comparison')
+              | Степени сравнения прилагательных
+          li
+            a(href='#/prepositions')
+              | Предлоги
+          li
+            a(href='#/usage-of-tenses')
+              | Употребление времен
+          li
+            a(href='#/passive-voice')
+              | Passive Voice
+          li
+            a(href='#/sequence-of-tenses')
+              | Согласование времен. Косвенная речь
+          li
+            a(href='#/infinitive')
+              | Инфинитив
+          li
+            a(href='#/communion')
+              | Причастие
+          li
+            a(href='#/gerund')
+              | Герундий
+          li
+            a(href='#/communion-gerund-verbalnoun')
+              | Причастие, герундий и отглагольное существительное
+          li
+            a(href='#/complex-object')
+              | Сложное дополнение (Complex Object)
+          li
+            a(href='#/complex-subject')
+              | Сложное подлежащее (Complex Subject)
+          li
+            a(href='#/conditional-sentences')
+              | Условные предложения.
+              br
+              | Сослагательное наклонение после "I wish"
+          li
+            a(href='#/modal-verbs')
+              | Модальные глаголы
+    .container-fluid
+      .col-sm-8.col-sm-offset-4.col-md-9.col-md-offset-3.main
+        div(ng-view="")
