@@ -6,7 +6,7 @@
     ])
         .config(EnglishConfig)
         .filter('safeHtml', function ($sce) {
-            return function(value) {
+            return function (value) {
                 return $sce.trustAsHtml(value);
             };
         });
