@@ -22,59 +22,7 @@ block body
   .container-fluid
     .row
       .col-sm-4.col-md-3.sidebar
-        ul.nav.nav-sidebar
-          li.active
-            a(href='#/rules/article')
-              | Артикль
-          li
-            a(href='#/rules/noun')
-              | Существительное
-          li
-            a(href='#/rules/pronouns')
-              | Местоимения some, any, no, every
-              br
-              | и их производные
-          li
-            a(href='#/rules/adjectives-degrees-of-comparison')
-              | Степени сравнения прилагательных
-          li
-            a(href='#/rules/prepositions')
-              | Предлоги
-          li
-            a(href='#/rules/usage-of-tenses')
-              | Употребление времен
-          li
-            a(href='#/rules/passive-voice')
-              | Passive Voice
-          li
-            a(href='#/rules/sequence-of-tenses')
-              | Согласование времен. Косвенная речь
-          li
-            a(href='#/rules/infinitive')
-              | Инфинитив
-          li
-            a(href='#/rules/communion')
-              | Причастие
-          li
-            a(href='#/rules/gerund')
-              | Герундий
-          li
-            a(href='#/rules/communion-gerund-verbalnoun')
-              | Причастие, герундий и отглагольное существительное
-          li
-            a(href='#/rules/complex-object')
-              | Сложное дополнение (Complex Object)
-          li
-            a(href='#/rules/complex-subject')
-              | Сложное подлежащее (Complex Subject)
-          li
-            a(href='#/rules/conditional-sentences')
-              | Условные предложения.
-              br
-              | Сослагательное наклонение после "I wish"
-          li
-            a(href='#/rules/modal-verbs')
-              | Модальные глаголы
+        div(themes-list="")
     .container-fluid
       .col-sm-8.col-sm-offset-4.col-md-9.col-md-offset-3.main
         div(ng-view="")
