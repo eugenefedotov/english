@@ -1,5 +1,5 @@
-<ul>
+<ul class="nav nav-sidebar">
   <li data-ng-repeat="item in themes">
-    <a href="{{item.link}}">{{item.name}}</a>
+    <a href="/#/rules/{{item.link}}"><span ng-bind-html="item.name | safeHtml"></span></a>
   </li>
 </ul>

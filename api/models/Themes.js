@@ -2,7 +2,7 @@
  * Themes.js
  *
  * @description :: Themes model
- * @docs        :: http://sailsjs.org/#!documentation/models
+ * @docs        :: http://sailsjs.org/#!/documentation/concepts/Models
  */
 
 module.exports = {
@@ -13,7 +13,8 @@ module.exports = {
             required : true
         },
         link : {
-            type: 'string'
+            type: 'string',
+            required : true
         }
     }
 };

@@ -1,0 +1,25 @@
+<h2>Артикль</h2>
+<div ng-repeat="rule in rules">
+  <div class="bs-callout"
+       ng-class="{'bs-callout-info' : rule.status == 'no_active', 'bs-callout-done' : rule.status == 'done', 'bs-callout-process' : rule.status == 'process', 'bs-callout-error' : rule.status == 'error'}">
+
+    <p ng-bind-html="rule.text | safeHtml"></p>
+
+    <div class="highlight">
+      <a ng-if="rule.status == 'no_active'" href="javascript: void(0);">Пройти упражнения <span
+        class="glyphicon glyphicon-education"></span></a>
+      <a ng-if="rule.status == 'process'" href="javascript: void(0);">Упражнения в процессе выполнения <span
+        class="glyphicon glyphicon-time"></span></a>
+      <a ng-if="rule.status == 'done'" href="javascript: void(0);">Упражнения пройдены без ошибок <span
+        class="glyphicon glyphicon-ok"></span></a>
+      <a ng-if="rule.status == 'error'" href="javascript: void(0);">Есть ошибки. Пройти упражнения ещё раз <span
+        class="glyphicon glyphicon-education"></span></a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    console.log($('[data-toggle="tooltip"]'));
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

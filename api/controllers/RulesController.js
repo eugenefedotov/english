@@ -1,24 +1,17 @@
 /**
- * ThemesController
+ * RulesController
  *
  * @description :: Server-side logic for managing themes
  * @docs        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-module.exports = {
-
-    /**
-     * List of themes
-     * @param req
-     * @param res
-     */
+module.exports= {
     list : function (req, res) {
-        console.log(req.params);
-        Themes.find().exec(function(err, themes) {
+        Rules.find(req.params.id).exec(function (err, rules) {
             if(err) {
                 return res.serverError(err);
             }
-            return res.json(themes);
+            return res.json(rules);
         });
     }
 };
