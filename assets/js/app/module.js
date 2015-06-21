@@ -2,7 +2,8 @@
     'use strict';
 
     angular.module('English', [
-        'ngRoute', 'ngSanitize'
+        'ngRoute',
+        'ngSanitize'
     ])
         .config(EnglishConfig)
         .filter('safeHtml', function ($sce) {
@@ -12,24 +13,7 @@
         });
 
     EnglishConfig.$inject = ['$routeProvider'];
-    function EnglishConfig($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl : 'view/main.html',
-                controller  : 'MainController',
-                title       : 'Welcome to Home Page'
-            })
-            .when('/rules/:rule_id', {
-                templateUrl : 'view/rules.html',
-                controller  : 'RuleController'
-            })
-            .when('/articles', {
-                templateUrl : 'view/articles.html'
-            })
-            .otherwise({
-                redirectTo : '/'
-            });
-    }
+    function EnglishConfig($routeProvider) {}
 })();
 
 jQuery(document).ready(function($) {
