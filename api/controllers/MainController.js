@@ -1,7 +1,7 @@
 /**
- * RulesController
+ * MainController
  *
- * @description :: Server-side logic for managing themes
+ * @description ::
  * @docs        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
