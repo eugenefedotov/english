@@ -25,7 +25,7 @@
     "rc": "~0.5.0",
     "sails": "~0.11.0",
     "sails-disk": "^0.10.7",
-    "sails-hook-adminpanel": "^0.1.23",
+    "sails-hook-adminpanel": "0.1.21",
     "sails-hook-autoreload": "^0.11.5",
     "sails-mongo": "^0.11.2"
   },

@@ -1,38 +1,36 @@
-(function () {
-    'use strict';
+'use strict';
 
-    module.exports.adminpanel = {
-        instances: {
+module.exports.adminpanel = {
+    instances : {
 
-            users: {
+        users : {
 
-                title: 'Users',
-                model: 'User',
+            title : 'Users',
+            model : 'User',
 
-                list: {
-                    fields: {
-                        id: 'ID',
-                        email: 'Email',
-                        active: 'Active',
-                        admin: 'Admin',
-                        createdAt: 'Created'
-                    }
-                },
+            list : {
+                fields : {
+                    id        : 'ID',
+                    email     : 'Email',
+                    active    : 'Active',
+                    admin     : 'Admin',
+                    createdAt : 'Created'
+                }
+            },
 
-                edit: {
-                    fields: {
-                        email: 'Email',
+            edit : {
+                fields : {
+                    email : 'Email',
 
-                        active: {
-                            title: 'Active'
-                        },
-                        admin: {
-                            title: 'Admin',
-                            disabled: true
-                        }
+                    active : {
+                        title : 'Active'
+                    },
+                    admin  : {
+                        title    : 'Admin',
+                        disabled : true
                     }
                 }
             }
         }
-    };
-})();
+    }
+};
