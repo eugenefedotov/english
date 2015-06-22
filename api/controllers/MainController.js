@@ -5,8 +5,8 @@
  * @docs        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-module.exports= {
-    index : function (res, req) {
+module.exports = {
+    index : function (req, res) {
         return res.view('homepage');
     }
 };
