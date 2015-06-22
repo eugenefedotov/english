@@ -35,7 +35,7 @@ module.exports.routes = {
     '/'              : {
         view : 'homepage'
     },
-    'GET /rules/:id' : 'RulesController.lis'
+    'GET /rules/:id' : 'RulesController.list'
 
     /***************************************************************************
      *                                                                          *
