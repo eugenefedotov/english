@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+
     attributes : {
         theme_id : {
             type    : 'string',

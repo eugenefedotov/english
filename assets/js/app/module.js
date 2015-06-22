@@ -13,11 +13,24 @@
         });
 
     EnglishConfig.$inject = ['$routeProvider'];
-    function EnglishConfig($routeProvider) {}
+    function EnglishConfig($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl : 'view/main.html'
+            })
+            .when('/rules/:theme_link', {
+                templateUrl : 'view/rules.html'
+            })
+            .otherwise({
+                redirectTo : '/'
+            });
+    }
 })();
 
+/*
 jQuery(document).ready(function($) {
     $(document).tooltip({
         selector: "attr[data-type='tooltip']"
     });
 });
+*/

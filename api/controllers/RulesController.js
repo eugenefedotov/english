@@ -6,10 +6,13 @@
  */
 
 module.exports = {
+    /**
+     * List of rules
+     * @param req
+     * @param res
+     */
     list : function (req, res) {
-        console.log(1);
-        console.log(req.param['id']);
-        Rules.find(req.param['id']).exec(function (err, rules) {
+        Rules.find({theme_id : req.params.id}).exec(function (err, rules) {
             if(err) {
                 return res.serverError(err);
             }

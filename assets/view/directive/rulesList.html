@@ -1,5 +1,5 @@
-<h2>Артикль</h2>
-<div ng-repeat="rule in rules">
+<h2>{{rules.title}}</h2>
+<div ng-repeat="rule in rules.data">
   <div class="bs-callout"
        ng-class="{'bs-callout-info' : rule.status == 'no_active', 'bs-callout-done' : rule.status == 'done', 'bs-callout-process' : rule.status == 'process', 'bs-callout-error' : rule.status == 'error'}">
 
@@ -19,7 +19,6 @@
 </div>
 <script type="text/javascript">
   $(function () {
-    console.log($('[data-toggle="tooltip"]'));
     $('[data-toggle="tooltip"]').tooltip();
   });
 </script>

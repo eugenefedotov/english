@@ -2,24 +2,35 @@
 
 angular.module('English').directive('rulesList', rulesList);
 
-rulesList.$inject = ['$http'];
+rulesList.$inject = ['$http', '$routeParams'];
 
-function rulesList($http) {
+function rulesList($http, $routeParams) {
     return {
-        restrict    : 'EA',
+        restrict    : 'AE',
         templateUrl : 'view/directive/rulesList.html',
         scope       : {},
-        link : function ($scope) {
+        link        : function ($scope) {
 
             $scope.rules = [];
 
-            $http.get('rules/list')
+            $http.get('themes/dataByLink/'+$routeParams['theme_link'])
                 .success(function (data, status, headers, config) {
-                    $scope.rules = data;
+                    test(data)
                 })
                 .error(function (data, status, headers, config) {
                     console.log(status, data);
                 });
+
+            function test (theme_data) {
+                $http.get('rules/list/' + theme_data['id'])
+                    .success(function (data, status, headers, config) {
+                        $scope.rules.title = theme_data['name'];
+                        $scope.rules.data = data;
+                    })
+                    .error(function (data, status, headers, config) {
+                        console.log(status, data);
+                    });
+            }
         }
     }
 }
