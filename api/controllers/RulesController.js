@@ -5,9 +5,11 @@
  * @docs        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-module.exports= {
+module.exports = {
     list : function (req, res) {
-        Rules.find(req.params.id).exec(function (err, rules) {
+        console.log(1);
+        console.log(req.param['id']);
+        Rules.find(req.param['id']).exec(function (err, rules) {
             if(err) {
                 return res.serverError(err);
             }

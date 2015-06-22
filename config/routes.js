@@ -32,8 +32,10 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/'              : 'MainController.index',
-    'GET /rules/:id' : 'ThemesController.list'
+    '/'              : {
+        view : 'homepage'
+    },
+    'GET /#/rules/:id' : 'RulesController.list'
 
     /***************************************************************************
      *                                                                          *

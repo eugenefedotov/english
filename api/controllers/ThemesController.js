@@ -13,7 +13,6 @@ module.exports = {
      * @param res
      */
     list : function (req, res) {
-        console.log(req.params);
         Themes.find().exec(function(err, themes) {
             if(err) {
                 return res.serverError(err);
