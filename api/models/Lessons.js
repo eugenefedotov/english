@@ -1,22 +1,24 @@
 /**
- * Rules.js
+ * Lessons.js
  *
- * @description :: Rules model
+ * @description :: Lessons model
  * @docs        :: http://sailsjs.org/#!/documentation/concepts/Models
  */
-
-module.exports = {
-
+module.exprots = {
     attributes : {
-        theme_id : {
+        rule_id      : {
             type    : 'string',
             requred : true
         },
-        text     : {
+        lessons_type : {
             type    : 'string',
             requred : true
         },
-        status   : {
+        text         : {
+            type    : 'string',
+            requred : true
+        },
+        status       : {
             type : 'string'
         }
     }
