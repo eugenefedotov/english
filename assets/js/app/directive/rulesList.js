@@ -14,23 +14,16 @@ function rulesList($http, $routeParams) {
             $scope.rules = [];
 
             $http.get('themes/dataByLink/'+$routeParams['theme_link'])
-                .success(function (data, status, headers, config) {
-                    test(data)
-                })
-                .error(function (data, status, headers, config) {
-                    console.log(status, data);
-                });
+                .then(function (response) {
+                    var theme_data = response.data;
 
-            function test (theme_data) {
-                $http.get('rules/list/' + theme_data['id'])
-                    .success(function (data, status, headers, config) {
-                        $scope.rules.title = theme_data['name'];
-                        $scope.rules.data = data;
-                    })
-                    .error(function (data, status, headers, config) {
-                        console.log(status, data);
-                    });
-            }
+                    $http.get('rules/list/' + theme_data['id'])
+                        .then(function (response) {
+                            $scope.rules.title = theme_data['name'];
+                            $scope.rules.link  = theme_data['link'];
+                            $scope.rules.data  = response.data;
+                        });
+                });
         }
     }
 }

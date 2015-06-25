@@ -6,13 +6,13 @@
     <p ng-bind-html="rule.text | safeHtml"></p>
 
     <div class="highlight">
-      <a ng-if="rule.status == 'no_active'" href="javascript: void(0);">Пройти упражнения <span
+      <a ng-if="rule.status == 'no_active'" ng-href="/#/rules/{{rules.link}}/{{rule.id}}">Пройти упражнения <span
         class="glyphicon glyphicon-education"></span></a>
-      <a ng-if="rule.status == 'process'" href="javascript: void(0);">Упражнения в процессе выполнения <span
+      <a ng-if="rule.status == 'process'" ng-href="/#/rules/{{rules.link}}/{{rule.id}}">Упражнения в процессе выполнения <span
         class="glyphicon glyphicon-time"></span></a>
-      <a ng-if="rule.status == 'done'" href="javascript: void(0);">Упражнения пройдены без ошибок <span
+      <a ng-if="rule.status == 'done'" ng-href="/#/rules/{{rules.link}}/{{rule.id}}">Упражнения пройдены без ошибок <span
         class="glyphicon glyphicon-ok"></span></a>
-      <a ng-if="rule.status == 'error'" href="javascript: void(0);">Есть ошибки. Пройти упражнения ещё раз <span
+      <a ng-if="rule.status == 'error'" ng-href="/#/rules/{{rules.link}}/{{rule.id}}">Есть ошибки. Пройти упражнения ещё раз <span
         class="glyphicon glyphicon-education"></span></a>
     </div>
   </div>
