@@ -38,29 +38,45 @@ module.exports.adminpanel = {
 
             list : {
                 fields : {
-                    id   : 'ID',
-                    name : 'Name',
-                    link : 'Link',
-                    createdAt: false,
-                    updatedAt: false
+                    id        : 'ID',
+                    name      : 'Name',
+                    link      : 'Link',
+                    createdAt : false,
+                    updatedAt : false
                 }
             }
         },
-        rules : {
+        rules  : {
             title : 'Rules',
             model : 'Rules',
 
             list : {
                 fields : {
-                    text     : 'Text',
-                    status   : 'Status',
-                    theme_id : 'Theme ID',
-                    id       : 'ID',
-                    createdAt: false,
-                    updatedAt: false
+                    text      : 'Text',
+                    status    : 'Status',
+                    theme_id  : 'Theme ID',
+                    id        : 'ID',
+                    createdAt : false,
+                    updatedAt : false
                 }
             }
         },
+
+        lessons : {
+            title : 'Lessons',
+            model : 'Lessons',
+
+            list : {
+                fields : {
+                    text         : 'Text',
+                    lesson_type  : 'Type',
+                    rule_id      : 'Theme ID',
+                    id           : 'ID',
+                    createdAt    : false,
+                    updatedAt    : false
+                }
+            }
+        }
 
     }
 };

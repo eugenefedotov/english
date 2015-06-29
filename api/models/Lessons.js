@@ -4,22 +4,36 @@
  * @description :: Lessons model
  * @docs        :: http://sailsjs.org/#!/documentation/concepts/Models
  */
-module.exprots = {
+
+var _ = require('lodash');
+
+var TYPES = {
+    TRANSLATION : 'translation',
+    WORD        : 'word'
+};
+
+module.exports = {
+
+    TYPES : TYPES,
+
     attributes : {
-        rule_id      : {
+        rule_id     : {
             type    : 'string',
             requred : true
         },
-        lessons_type : {
+        lesson_type : {
+            type       : 'string',
+            enum       : _.values(TYPES),
+            required   : true,
+            defaultsTo : TYPES.TRANSLATION
+        },
+        text        : {
             type    : 'string',
             requred : true
         },
-        text         : {
+        answer      : {
             type    : 'string',
             requred : true
-        },
-        status       : {
-            type : 'string'
         }
     }
 };
