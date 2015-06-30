@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports.adminpanel = {
+
+    assets: 'link',
+
     instances : {
         themes : {
             title : 'Themes',
@@ -22,9 +25,9 @@ module.exports.adminpanel = {
 
             list : {
                 fields : {
-                    text         : {
-                        title:'Text',
-                        editor: true
+                    text      : {
+                        title  : 'Text',
+                        editor : true
                     },
                     status    : 'Status',
                     theme_id  : 'Theme ID',
@@ -41,15 +44,15 @@ module.exports.adminpanel = {
 
             list : {
                 fields : {
-                    text         : {
-                        title:'Text',
-                        editor: true
+                    text        : {
+                        title  : 'Text',
+                        editor : true
                     },
-                    lesson_type  : 'Type',
-                    rule_id      : 'Theme ID',
-                    id           : 'ID',
-                    createdAt    : false,
-                    updatedAt    : false
+                    lesson_type : 'Type',
+                    rule_id     : 'Theme ID',
+                    id          : 'ID',
+                    createdAt   : false,
+                    updatedAt   : false
                 }
             }
         }
