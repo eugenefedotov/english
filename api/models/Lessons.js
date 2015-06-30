@@ -28,7 +28,7 @@ module.exports = {
             defaultsTo : TYPES.TRANSLATION
         },
         text        : {
-            type    : 'string',
+            type    : 'text',
             requred : true
         },
         answer      : {

@@ -13,7 +13,7 @@ module.exports = {
             requred : true
         },
         text     : {
-            type    : 'string',
+            type    : 'text',
             requred : true
         },
         status   : {

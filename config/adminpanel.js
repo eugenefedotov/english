@@ -2,36 +2,6 @@
 
 module.exports.adminpanel = {
     instances : {
-
-        /* users : {
-
-         title : 'Users',
-         model : 'User',
-
-         list : {
-         fields : {
-         id        : 'ID',
-         email     : 'Email',
-         active    : 'Active',
-         admin     : 'Admin',
-         createdAt : 'Created'
-         }
-         },
-
-         edit : {
-         fields : {
-         email : 'Email',
-
-         active : {
-         title : 'Active'
-         },
-         admin  : {
-         title    : 'Admin',
-         disabled : true
-         }
-         }
-         }
-         },*/
         themes : {
             title : 'Themes',
             model : 'Themes',
@@ -52,7 +22,10 @@ module.exports.adminpanel = {
 
             list : {
                 fields : {
-                    text      : 'Text',
+                    text         : {
+                        title:'Text',
+                        editor: true
+                    },
                     status    : 'Status',
                     theme_id  : 'Theme ID',
                     id        : 'ID',
@@ -68,7 +41,10 @@ module.exports.adminpanel = {
 
             list : {
                 fields : {
-                    text         : 'Text',
+                    text         : {
+                        title:'Text',
+                        editor: true
+                    },
                     lesson_type  : 'Type',
                     rule_id      : 'Theme ID',
                     id           : 'ID',
