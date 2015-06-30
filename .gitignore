@@ -4,6 +4,7 @@ config/local.js
 # Dependencies
 node_modules
 assets/vendor
+assets/admin
 
 # Sails.js / Waterline / Grunt
 .tmp
@@ -24,5 +25,4 @@ npm-debug.log
 .netbeans
 nbproject
 .idea
-assets/admin
 .node_history
