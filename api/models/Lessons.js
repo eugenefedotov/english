@@ -19,7 +19,7 @@ module.exports = {
     attributes : {
         rule_id     : {
             type    : 'string',
-            requred : true
+            required : true
         },
         lesson_type : {
             type       : 'string',
@@ -29,11 +29,14 @@ module.exports = {
         },
         text        : {
             type    : 'text',
-            requred : true
+            required : true
         },
         answer      : {
             type    : 'string',
-            requred : true
+            required : true
+        },
+        status : {
+            type: 'boolean'
         }
     }
 };

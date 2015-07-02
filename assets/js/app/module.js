@@ -21,6 +21,9 @@
             .when('/rules/:theme_link', {
                 templateUrl : 'view/rules.html'
             })
+            .when('/rules/:theme_link/:rule_id', {
+                templateUrl : 'view/lessons.html'
+            })
             .otherwise({
                 redirectTo : '/'
             });

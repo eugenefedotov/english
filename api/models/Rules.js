@@ -10,11 +10,11 @@ module.exports = {
     attributes : {
         theme_id : {
             type    : 'string',
-            requred : true
+            required : true
         },
         text     : {
             type    : 'text',
-            requred : true
+            required : true
         },
         status   : {
             type : 'string'

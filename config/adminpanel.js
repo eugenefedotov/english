@@ -2,39 +2,35 @@
 
 module.exports.adminpanel = {
 
-    assets: 'link',
+    assets : 'link',
 
     instances : {
         themes : {
             title : 'Themes',
             model : 'Themes',
 
-            list : {
-                fields : {
-                    id        : 'ID',
-                    name      : 'Name',
-                    link      : 'Link',
-                    createdAt : false,
-                    updatedAt : false
-                }
+            fields : {
+                id        : 'ID',
+                name      : 'Name',
+                link      : 'Link',
+                createdAt : false,
+                updatedAt : false
             }
         },
         rules  : {
             title : 'Rules',
             model : 'Rules',
 
-            list : {
-                fields : {
-                    text      : {
-                        title  : 'Text',
-                        editor : true
-                    },
-                    status    : 'Status',
-                    theme_id  : 'Theme ID',
-                    id        : 'ID',
-                    createdAt : false,
-                    updatedAt : false
-                }
+            fields : {
+                id        : 'ID',
+                theme_id  : 'Theme ID',
+                text      : {
+                    title  : 'Text',
+                    editor : true
+                },
+                status    : 'Status',
+                createdAt : false,
+                updatedAt : false
             }
         },
 
@@ -42,18 +38,17 @@ module.exports.adminpanel = {
             title : 'Lessons',
             model : 'Lessons',
 
-            list : {
-                fields : {
-                    text        : {
-                        title  : 'Text',
-                        editor : true
-                    },
-                    lesson_type : 'Type',
-                    rule_id     : 'Theme ID',
-                    id          : 'ID',
-                    createdAt   : false,
-                    updatedAt   : false
-                }
+            fields : {
+                id          : 'ID',
+                rule_id     : 'Rule ID',
+                text        : {
+                    title  : 'Text',
+                    editor : true
+                },
+                lesson_type : 'Type',
+                status      : false,
+                createdAt   : false,
+                updatedAt   : false
             }
         }
 
