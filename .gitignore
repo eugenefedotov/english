@@ -5,6 +5,7 @@ config/local.js
 node_modules
 assets/vendor
 assets/admin
+www
 
 # Sails.js / Waterline / Grunt
 .tmp
