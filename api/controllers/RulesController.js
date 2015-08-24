@@ -6,17 +6,20 @@
  */
 
 module.exports = {
-    /**
-     * List of rules
-     * @param req
-     * @param res
-     */
-    list : function (req, res) {
-        Rules.find({theme_id : req.params.id}).exec(function (err, rules) {
-            if(err) {
-                return res.serverError(err);
-            }
-            return res.json(rules);
-        });
+  /**
+   * List of rules
+   * @param req
+   * @param res
+   */
+  list : function (req, res) {
+    if(!req.param('id')) {
+      return res.badRequest();
     }
+    Rules.find({theme_id : req.param('id')}).exec(function (err, rules) {
+      if (err) {
+        return res.serverError(err);
+      }
+      return res.json(rules);
+    });
+  }
 };

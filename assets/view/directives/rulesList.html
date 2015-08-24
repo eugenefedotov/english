@@ -1,0 +1,24 @@
+<h2>{{::rules.title}}</h2>
+<div data-ng-repeat="rule in ::rules.data">
+  <div class="bs-callout"
+       data-ng-class="{'bs-callout-info' : rule.status == 'no_active', 'bs-callout-done' : rule.status == 'done', 'bs-callout-process' : rule.status == 'process', 'bs-callout-error' : rule.status == 'error'}">
+
+    <p data-ng-bind-html="::rule.text | safeHtml"></p>
+
+    <div class="highlight">
+      <a data-ng-if="::rule.status == 'no_active'" data-ng-href="/#/rules/{{::rules.themeLink}}/{{::rule.id}}">Пройти упражнения <span
+        class="glyphicon glyphicon-education"></span></a>
+      <a data-ng-if="::rule.status == 'process'" data-ng-href="/#/rules/{{::rules.themeLink}}/{{::rule.id}}">Упражнения в процессе выполнения <span
+        class="glyphicon glyphicon-time"></span></a>
+      <a data-ng-if="::rule.status == 'done'" data-ng-href="/#/rules/{{::rules.themeLink}}/{{::rule.id}}">Упражнения пройдены без ошибок <span
+        class="glyphicon glyphicon-ok"></span></a>
+      <a data-ng-if="::rule.status == 'error'" data-ng-href="/#/rules/{{::rules.themeLink}}/{{::rule.id}}">Есть ошибки. Пройти упражнения ещё раз <span
+        class="glyphicon glyphicon-education"></span></a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

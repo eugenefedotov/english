@@ -1,0 +1,5 @@
+<ul class="nav nav-sidebar">
+  <li data-ng-repeat="theme in ::themes">
+    <a href="/#/rules/{{::theme.link}}"><span data-ng-bind-html="::theme.name | safeHtml"></span></a>
+  </li>
+</ul>

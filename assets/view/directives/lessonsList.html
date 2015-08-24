@@ -1,0 +1,13 @@
+<div data-ng-repeat="lesson in ::lessons">
+  <fieldset class="scheduler-border" data-ng-class="{'done' : verified[lesson.id].done == true, 'error' : verified[lesson.id].done == false}">
+    <legend class="scheduler-border">Упражнение {{$index + 1}}</legend>
+    <div id="{{::lesson.lesson_type == 'word' ? lesson.id : ''}}" data-ng-bind-html="::lesson.text | safeHtml"></div>
+    <div data-ng-show="lesson.lesson_type == 'translation'">
+      <br />
+      <textarea id="{{::lesson.id}}" class="form-control" placeholder="Text translate" style="width: 100%;min-height: 65px;"></textarea>
+      <br />
+    </div>
+    <div class="clearfix"></div>
+    <div data-check-lesson="" data-lesson-id="lessson.id" data-lesson-type="lesson.lesson_type"></div>
+  </fieldset>
+</div>
